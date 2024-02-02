@@ -1,66 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0; user-scalable=0;" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0; user-scalable=0;" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <title>Document</title>
 </head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+  }
+  #offers-container{
+    display: flex;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* #cards{
+    height: ;
+  } */
+  #cards #card-body #card-title{
+    font-size: xx-large;
+  }
+  #cards #card-body #card-text{
+    font-size: x-large;
+  }
+  #cards #card-body #details #card-text{
+    margin-top: 10px;
+  }
+  @media only screen and (min-width: 768px) and (max-width:1023px){
+    #offers-container{
+      flex-direction: row;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    #carousel{
+      width: 30%;
+    }
+    #cards{
+      width: 55%;
+      height: 60%;
+    }
+    #cards #card-body p{
+      font-size: 3vh;
+    }
+  }
+  @media only screen and (min-width: 1024px){
+    #offers-container{
+      flex-direction: row;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    #carousel{
+      width: 30%;
+    }
+    #cards{
+      width: 50%;
+      height: 50%;
+    }
+    #cards #card-body p{
+      font-size: 3vh;
+    }
+  }
+
+</style>
 <body>
-    <div id="offers-container" class="">
-        <div id="inner-offers" class="d-flex flex-wrap justify-content-around">
-          <div id="cards" class="card p-1 shadow hidden">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div id="slide" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-              <div class="carousel-inner rounded">
-                <div class="carousel-item active">
-                  <img src="g (1).JPG" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="g (2).JPG" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="g (3).JPG" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#slide" data-bs-slide="prev" id="carousel-button">
-                <span class="carousel-control-prev-icon"></span>
-              </button>
-              <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#slide" data-bs-slide="next" id="carousel-button">
-                <span class="carousel-control-next-icon"></span>
-              </button>
-            </div>
-            <div class="card-body" id="card-body" style="padding: 0;">
-              <p class="card-title" id="card-title" style="font-size: 5vw;">Pista Collection</p>
-              <p class="card-text" id="card-text" style="font-size: 5vw;">&#8377<span id="off-rate">999</span> <del><small id="rate">1200</small></del> <small id="off-percent" style="color:green;"></small></p>
-            </div>
+  <div id="offers-container">
+    <div id="carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div id="slide" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#slide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#modal1">
+            <img src="g (1).JPG" class="d-block w-100 h-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modal2">
+            <img src="g (2).JPG" class="d-block w-100 h-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modal3">
+            <img src="g (3).JPG" class="d-block w-100 h-100" alt="...">
           </div>
         </div>
+        <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#slide" data-bs-slide="prev"
+          id="carousel-button">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#slide" data-bs-slide="next"
+          id="carousel-button">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
     </div>
 
+    <div id="cards" class="card p-1 shadow overflow-x-auto">  
+        <div class="card-body" id="card-body" style="padding: 0;">
+          <p class="card-title" id="card-title">Pista Collection</p>
+          <p class="card-text" id="card-text">&#8377<span id="off-rate">999</span> <del><small id="rate">1200</small></del> <small id="off-percent" style="color:green;"></small>
+          </p>
+            <hr>
+          <p id="details">
+            <b id="card-text">Fabric & colour : georgette | pista green</b><br><br>
+            <span id="card-text">Pista green georgette ankle length anarkali with full hand gathered sleeveattached. back open knot with tassels.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <img src="g (1).jpg" alt="" width="100%">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <img src="g (2).jpg" alt="" width="100%">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <img src="g (3).jpg" alt="" width="100%">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+    
     <script>
-        // offer convertor
-        let offRateElements = document.querySelectorAll("#off-rate");
-        let rateElements = document.querySelectorAll("#rate");
-        let offPercentElements = document.querySelectorAll("#off-percent");
-    
-        for (let i = 0; i < offRateElements.length; i++) {
-          let x = parseInt(offRateElements[i].innerText.trim());
-          let y = parseInt(rateElements[i].innerText.trim());
-    
-          let z = Math.round((isNaN(x) || isNaN(y)) ? "Invalid input" : 100 - (x / y) * 100);
-    
-          offPercentElements[i].innerHTML = z+'% off';
-        }
-      </script>
+      // offer convertor
+      let offRateElements = document.querySelectorAll("#off-rate");
+      let rateElements = document.querySelectorAll("#rate");
+      let offPercentElements = document.querySelectorAll("#off-percent");
+
+      for (let i = 0; i < offRateElements.length; i++) {
+        let x = parseInt(offRateElements[i].innerText.trim());
+        let y = parseInt(rateElements[i].innerText.trim());
+
+        let z = Math.round((isNaN(x) || isNaN(y)) ? "Invalid input" : 100 - (x / y) * 100);
+
+        offPercentElements[i].innerHTML = z + '% off';
+      }
+    </script>
 </body>
+
 </html>
