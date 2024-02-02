@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: arial;
+    font-family: Roboto,Arial,sans-serif;
   }
   #offers-container{
     display: flex;
@@ -25,17 +25,20 @@
     align-items: center;
     flex-direction: column;
   }
-  /* #cards{
-    height: ;
-  } */
+  #cards{
+    margin: 1em;
+    padding: 1em;
+  }
   #cards #card-body #card-title{
     font-size: xx-large;
   }
   #cards #card-body #card-text{
-    font-size: x-large;
+    font-size: large;
   }
   #cards #card-body #details #card-text{
+    display: inline-block;
     margin-top: 10px;
+    width: 100%;
   }
   @media only screen and (min-width: 768px) and (max-width:1023px){
     #offers-container{
@@ -105,15 +108,17 @@
       </div>
     </div>
 
-    <div id="cards" class="card p-1 shadow overflow-x-auto">  
+    <div id="cards" class="card shadow overflow-x-auto">  
         <div class="card-body" id="card-body" style="padding: 0;">
           <p class="card-title" id="card-title">Pista Collection</p>
           <p class="card-text" id="card-text">&#8377<span id="off-rate">999</span> <del><small id="rate">1200</small></del> <small id="off-percent" style="color:green;"></small>
           </p>
             <hr>
           <p id="details">
-            <b id="card-text">Fabric & colour : georgette | pista green</b><br><br>
-            <span id="card-text">Pista green georgette ankle length anarkali with full hand gathered sleeveattached. back open knot with tassels.</span>
+            <b id="card-text">Fabric & colour</b> 
+            <span id="card-text"> georgette | pista green</span><br><br>
+            <b id="card-text">Description</b>
+            <span id="card-text">Pista green georgette ankle length anarkali with full hand gathered sleeve attached. back open knot with tassels.</span>
           </p>
         </div>
       </div>
@@ -122,7 +127,7 @@
     <div class="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <img src="g (1).jpg" alt="" width="100%">
+          <img src="g (1).JPG" alt="" width="100%">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
 
         </div>
@@ -131,7 +136,7 @@
     <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <img src="g (2).jpg" alt="" width="100%">
+          <img src="g (2).JPG" alt="" width="100%">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
 
         </div>
@@ -140,7 +145,7 @@
     <div class="modal fade" id="modal3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <img src="g (3).jpg" alt="" width="100%">
+          <img src="g (3).JPG" alt="" width="100%">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
 
         </div>
